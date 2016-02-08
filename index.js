@@ -12,6 +12,7 @@ module.exports = {
     'comma-dangle': 0,
     'strict': [2, 'global'],
     'func-names': 0,
-    'vars-on-top': 0
+    'vars-on-top': 0,
+    'spaced-comment': 0
   }
 };

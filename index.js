@@ -10,6 +10,8 @@ module.exports = {
   },
   rules: {
     'comma-dangle': 0,
-    'strict': [2, 'global']
+    'strict': [2, 'global'],
+    'func-names': 0,
+    'vars-on-top': 0
   }
 };

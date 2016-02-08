@@ -6,7 +6,7 @@ Browser modules should use the ES5 rules from the guide above.
 
 ### Installation
 
-`npm install --save-dev eslint-config-firstandthird`
+`npm install --save-dev eslint eslint-config-airbnb eslint-config-firstandthird`
 
 Also make sure you install an [eslint integration](http://eslint.org/docs/user-guide/integrations) in your editor.
 

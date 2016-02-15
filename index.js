@@ -13,6 +13,7 @@ module.exports = {
     'strict': [2, 'global'],
     'func-names': 0,
     'vars-on-top': 0,
-    'spaced-comment': 0
+    'spaced-comment': 0,
+    'no-param-reassign': 0
   }
 };

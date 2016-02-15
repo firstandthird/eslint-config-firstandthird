@@ -9,6 +9,7 @@ module.exports = {
     'func-names': 0,
     'vars-on-top': 0,
     'spaced-comment': 0,
-    'no-param-reassign': 0
+    'no-param-reassign': 0,
+    'space-before-function-paren': 0
   }
 };

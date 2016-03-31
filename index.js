@@ -16,6 +16,7 @@ module.exports = {
     'spaced-comment': 0,
     'no-param-reassign': 0,
     'space-before-function-paren': 0,
-    'consistent-return': 0
+    'consistent-return': 0,
+    'max-len': 0
   }
 };

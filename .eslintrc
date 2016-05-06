@@ -1,5 +1,5 @@
 {
-  "extends": "airbnb",
+  "extends": "./index.js",
   "ecmaFeatures": {
     "modules": false
   },

@@ -4,7 +4,7 @@ Server code should follow [this styleguide](https://github.com/airbnb/javascript
 
 ### Installation
 
-`npm install --save-dev eslint-config-firstandthird eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint`
+`npm install --save-dev eslint-config-firstandthird eslint-config-airbnb@8.0.0 eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint@"^2.9.0"`
 
 Also make sure you install an [eslint integration](http://eslint.org/docs/user-guide/integrations) in your editor.
 

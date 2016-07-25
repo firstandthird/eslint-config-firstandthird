@@ -17,6 +17,7 @@ module.exports = {
     'space-before-function-paren': 0,
     'consistent-return': 0,
     'max-len': 0,
+    'handle-callback-err': 2,
     'callback-return': [2, ['callback', 'cb', 'next', 'done', 'allDone']]
   }
 };

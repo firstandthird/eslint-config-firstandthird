@@ -1,4 +1,10 @@
 
+2.1.0 / 2016-07-25
+==================
+
+  * added 'handle-callback-err' as an error.
+  * 'no-new' and 'global-require' now turned off
+
 1.7.0 / 2016-03-31
 ==================
 

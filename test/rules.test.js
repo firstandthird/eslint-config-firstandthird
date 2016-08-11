@@ -205,7 +205,6 @@ var x = function(){};
     const passReport = eslintEngine.executeOnText(`
       var x = function thisissupposedtobeanextremelylongfunctionname(that, has, a) { var namethatisalsoabsurdlylong; };
     `);
-    console.log(passReport.results[0])
     expect(passReport.results[0].errorCount).to.equal(0);
     expect(passReport.results[0].warningCount).to.equal(0);
     done();

@@ -1,7 +1,15 @@
+
 module.exports = {
   extends: [
-    'airbnb'
-  ],
+    './rules/best-practices',
+    './rules/errors',
+    './rules/legacy',
+    './rules/node',
+    './rules/style',
+    './rules/legacy',
+    './rules/es6',
+    './rules/variables'
+  ].map(require.resolve),
   ecmaFeatures: {
     modules: false
   },

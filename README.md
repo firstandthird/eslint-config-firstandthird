@@ -1,5 +1,7 @@
 # ESLint config
 
+[![Build Status](https://travis-ci.org/firstandthird/eslint-config-firstandthird.svg?branch=master)](https://travis-ci.org/firstandthird/eslint-config-firstandthird)
+
 Server code should follow [this styleguide](https://github.com/airbnb/javascript) and use ES6 that's [shipping in node](https://nodejs.org/en/docs/es6/).
 
 ### Installation

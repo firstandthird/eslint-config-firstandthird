@@ -21,7 +21,7 @@
     "eslint": "^3.4.0",
     "eslint-plugin-import": "^1.14.0"
   },
-  "dependencies": {
+  "peerDependencies": {
     "eslint": "^3.4.0",
     "eslint-plugin-import": "^1.14.0"
   }

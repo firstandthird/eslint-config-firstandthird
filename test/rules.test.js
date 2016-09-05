@@ -4,6 +4,20 @@ const expect = require('chai').expect;
 const base = require('../index.js');
 
 
+describe('core functionality', function() {
+  it('can be loaded by eslint:', (done) => {
+    const eslintEngine = new CLIEngine(base);
+    done();
+  });
+  it('can be loaded and executed by eslint:', (done) => {
+    const eslintEngine = new CLIEngine(base);
+    const passReport = eslintEngine.executeOnText('const x = 5;');
+    expect(typeof passReport.results[0].errorCount).to.equal('number');
+    expect(typeof passReport.results[0].warningCount).to.equal('number');
+    done();
+  });
+});
+
 describe('firstandthird rules', function() {
   it('allows dangling commas (comma-dangle: 0)', (done) => {
     const eslintEngine = new CLIEngine({
@@ -29,7 +43,7 @@ var foo = {
       envs: ['node', 'mocha'],
       useEslintrc: false,
       rules: {
-          'strict': base.rules['strict']
+        strict: base.rules.strict
       }
     });
     const passReport = eslintEngine.executeOnText(`

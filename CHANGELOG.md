@@ -1,4 +1,15 @@
 
+3.1.0 / 2016-11-18
+==================
+
+  * allow function args to not all have to be used
+  * indent - memberexpression (starting with . must be indented)
+
+3.0.2 / 2016-11-18
+==================
+
+  * Bump eslint@3.9.1 & eslint-plugin-import@2.1.0
+
 3.0.1 / 2016-08-30
 ==================
 

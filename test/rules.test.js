@@ -281,8 +281,8 @@ var x = function(){};
     expect(passReport.results[0].warningCount).to.equal(0);
     done();
   });
-  
-  it('disallows nested ternary expressions (no-nested-ternary: 0)', (done) => {
+
+  it('disallows nested ternary expressions (no-nested-ternary: 2)', (done) => {
     const eslintEngine = new CLIEngine({
       envs: ['node', 'mocha'],
       useEslintrc: false,
@@ -291,9 +291,10 @@ var x = function(){};
       }
     });
     const passReport = eslintEngine.executeOnText(`
-      var thing = foo ? bar : baz === qux ? quxx : foobar;
+      var thing = foo ? bar :
+        baz === qux ? quxx : foobar;
     `);
-    expect(passReport.results[0].errorCount).to.equal(0);
+    expect(passReport.results[0].errorCount).to.equal(1);
     done();
   });
 

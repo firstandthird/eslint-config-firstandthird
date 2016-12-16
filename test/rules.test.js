@@ -285,16 +285,16 @@ var x = function(){};
   it('disallows nested ternary expressions (no-nested-ternary: 2)', (done) => {
     const eslintEngine = new CLIEngine({
       envs: ['node', 'mocha'],
-      useEslintrc: false,
-      rules: {
-        'no-nested-ternary': base.rules['no-nested-ternary']
+      useEslintrc: true
+    });
+    const passReport = eslintEngine.executeOnText('const thing = foo ? bar : baz === qux ? quxx : foobar;');
+    let found = false;
+    passReport.results[0].messages.forEach((item) => {
+      if (item.ruleId === 'no-nested-ternary') {
+        found = true;
       }
     });
-    const passReport = eslintEngine.executeOnText(`
-      var thing = foo ? bar :
-        baz === qux ? quxx : foobar;
-    `);
-    expect(passReport.results[0].errorCount).to.equal(1);
+    expect(found).to.equal(true);
     done();
   });
 

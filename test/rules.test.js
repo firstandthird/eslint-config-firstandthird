@@ -282,6 +282,22 @@ var x = function(){};
     done();
   });
 
+  it('disallows nested ternary expressions (no-nested-ternary: 2)', (done) => {
+    const eslintEngine = new CLIEngine({
+      envs: ['node', 'mocha'],
+      useEslintrc: true
+    });
+    const passReport = eslintEngine.executeOnText('const thing = foo ? bar : baz === qux ? quxx : foobar;');
+    let found = false;
+    passReport.results[0].messages.forEach((item) => {
+      if (item.ruleId === 'no-nested-ternary') {
+        found = true;
+      }
+    });
+    expect(found).to.equal(true);
+    done();
+  });
+
 /*
 'callback-return': [2, ['callback', 'cb', 'next', 'done', 'allDone']]
 */

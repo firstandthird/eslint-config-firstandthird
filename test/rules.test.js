@@ -1,4 +1,5 @@
 'use strict';
+
 const CLIEngine = require('eslint').CLIEngine;
 const expect = require('chai').expect;
 const base = require('../index.js');
@@ -35,24 +36,6 @@ var foo = {
 }`);
   expect(passReport.results[0].errorCount).to.equal(0);
   expect(passReport.results[0].warningCount).to.equal(0);
-    done();
-  });
-
-  it('allows you to exclude strict mode (strict: 0)', (done) => {
-    const eslintEngine = new CLIEngine({
-      envs: ['node', 'mocha'],
-      useEslintrc: false,
-      rules: {
-        strict: base.rules.strict
-      }
-    });
-    const passReport = eslintEngine.executeOnText(`
-var foo = {
-  bar: "baz",
-  quz: "quuz"
-}`);
-    expect(passReport.results[0].errorCount).to.equal(0);
-    expect(passReport.results[0].warningCount).to.equal(0);
     done();
   });
 
@@ -291,6 +274,23 @@ var x = function(){};
     let found = false;
     passReport.results[0].messages.forEach((item) => {
       if (item.ruleId === 'no-nested-ternary') {
+        found = true;
+      }
+    });
+    expect(found).to.equal(true);
+    done();
+  });
+
+  it('requires "use strict" in the global scope', (done) => {
+    const eslintEngine = new CLIEngine({
+      envs: ['node', 'mocha'],
+      useEslintrc: true
+    });
+    const passReport = eslintEngine.executeOnText('const x = 5;');
+    let found = false;
+    console.log(passReport.results[0])
+    passReport.results[0].messages.forEach((item) => {
+      if (item.ruleId === 'strict') {
         found = true;
       }
     });

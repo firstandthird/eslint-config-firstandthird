@@ -4,7 +4,6 @@ module.exports = {
   },
   'parserOptions': {
     'ecmaVersion': 6,
-    'sourceType': 'module',
     'ecmaFeatures': {
       'generators': false,
       'objectLiteralDuplicateProperties': false

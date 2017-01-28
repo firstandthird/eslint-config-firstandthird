@@ -1,3 +1,4 @@
+'use strict';
 
 module.exports = {
   extends: [
@@ -15,7 +16,7 @@ module.exports = {
   },
   rules: {
     'comma-dangle': 0,
-    strict: 0,
+    strict: [2, 'global'],
     'global-require': 0,
     'no-new': 0,
     'func-names': 0,

@@ -288,7 +288,6 @@ var x = function(){};
     });
     const passReport = eslintEngine.executeOnText('const x = 5;');
     let found = false;
-    console.log(passReport.results[0])
     passReport.results[0].messages.forEach((item) => {
       if (item.ruleId === 'strict') {
         found = true;

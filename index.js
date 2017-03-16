@@ -11,8 +11,8 @@ module.exports = {
     './rules/es6',
     './rules/variables'
   ].map(require.resolve),
-  ecmaFeatures: {
-    modules: false
+  parserOptions: {
+    sourceType: 'module'
   },
   rules: {
     'comma-dangle': 0,

@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   extends: [
     './rules/best-practices',
@@ -11,12 +9,8 @@ module.exports = {
     './rules/es6',
     './rules/variables'
   ].map(require.resolve),
-  ecmaFeatures: {
-    modules: false
-  },
   rules: {
     'comma-dangle': 0,
-    strict: [2, 'global'],
     'global-require': 0,
     'no-new': 0,
     'func-names': 0,

@@ -4,7 +4,6 @@ const CLIEngine = require('eslint').CLIEngine;
 const expect = require('chai').expect;
 const base = require('../index.js');
 
-
 describe('core functionality', function() {
   it('can be loaded by eslint:', (done) => {
     const eslintEngine = new CLIEngine(base);
@@ -274,22 +273,6 @@ var x = function(){};
     let found = false;
     passReport.results[0].messages.forEach((item) => {
       if (item.ruleId === 'no-nested-ternary') {
-        found = true;
-      }
-    });
-    expect(found).to.equal(true);
-    done();
-  });
-
-  it('requires "use strict" in the global scope', (done) => {
-    const eslintEngine = new CLIEngine({
-      envs: ['node', 'mocha'],
-      useEslintrc: true
-    });
-    const passReport = eslintEngine.executeOnText('const x = 5;');
-    let found = false;
-    passReport.results[0].messages.forEach((item) => {
-      if (item.ruleId === 'strict') {
         found = true;
       }
     });

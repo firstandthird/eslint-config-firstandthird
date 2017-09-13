@@ -9,6 +9,9 @@ module.exports = {
     './rules/es6',
     './rules/variables'
   ].map(require.resolve),
+  parserOptions: {
+    sourceType: 'module'
+  },
   rules: {
     'comma-dangle': 0,
     'global-require': 0,

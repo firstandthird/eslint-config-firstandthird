@@ -280,6 +280,22 @@ var x = function(){};
     done();
   });
 
+  it('lets you use the import statement', (done) => {
+    const eslintEngine = new CLIEngine({
+      envs: ['node', 'mocha'],
+      useEslintrc: true
+    });
+    const passReport = eslintEngine.executeOnText('import "chai"');
+    let found = false;
+    passReport.results[0].messages.forEach((item) => {
+      if (item.message.indexOf('import') !== -1) {
+        found = true;
+      }
+    });
+    expect(found).to.equal(false);
+    done();
+  });
+
 /*
 'callback-return': [2, ['callback', 'cb', 'next', 'done', 'allDone']]
 */

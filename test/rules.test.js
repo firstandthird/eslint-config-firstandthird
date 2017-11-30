@@ -280,6 +280,22 @@ var x = function(){};
     done();
   });
 
+  it('supports async/await syntax (no-nested-ternary: 2)', (done) => {
+    const eslintEngine = new CLIEngine({
+      envs: ['node', 'mocha'],
+      useEslintrc: true
+    });
+    const passReport = eslintEngine.executeOnText('const thing = async () => { };');
+    let found = false;
+    passReport.results[0].messages.forEach((item) => {
+      if (item.message === 'Parsing error: Unexpected token =>') {
+        found = true;
+      }
+    });
+    expect(found).to.equal(false);
+    done();
+  });
+
   it('lets you use the import statement', (done) => {
     const eslintEngine = new CLIEngine({
       envs: ['node', 'mocha'],

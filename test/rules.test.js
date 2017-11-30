@@ -280,7 +280,7 @@ var x = function(){};
     done();
   });
 
-  it('supports async/await syntax (no-nested-ternary: 2)', (done) => {
+  it('supports async/await syntax', (done) => {
     const eslintEngine = new CLIEngine({
       envs: ['node', 'mocha'],
       useEslintrc: true

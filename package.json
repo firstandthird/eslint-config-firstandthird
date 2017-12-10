@@ -23,6 +23,6 @@
   },
   "peerDependencies": {
     "eslint": "^4.13.0",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-import": "^2.8.0"
   }
 }

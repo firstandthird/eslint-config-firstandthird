@@ -27,6 +27,8 @@ module.exports = {
     'constructor-super': 0,
     // enforce the spacing around the * in generator functions
     'generator-star-spacing': 0,
+    // disallow loops that contain await statements:
+    'no-await-in-loop': 2,
     // disallow modifying variables of class declarations
     'no-class-assign': 0,
     // disallow arrow functions where they could be confused with comparisons
@@ -45,6 +47,8 @@ module.exports = {
     // disallow symbol constructor
     // http://eslint.org/docs/rules/no-new-symbol
     'no-new-symbol': 2,
+    // disallow 'return await .....' inside an async function:
+    'no-return-await': 2,
     // disallow specific globals
     'no-restricted-globals': 0,
     // disallow specific imports
@@ -76,6 +80,8 @@ module.exports = {
     'prefer-template': 2,
     // disallow generator functions that do not have yield
     'require-yield': 0,
+    // disallow async functions that do not have await
+    'require-await': 2,
     // import sorting
     // http://eslint.org/docs/rules/sort-imports
     'sort-imports': 0,

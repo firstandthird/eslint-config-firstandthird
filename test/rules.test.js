@@ -312,6 +312,55 @@ var x = function(){};
     done();
   });
 
+  it('requires "await" before an async function', (done) => {
+    const eslintEngine = new CLIEngine({
+      envs: ['node', 'mocha'],
+      useEslintrc: true
+    });
+    const passReport = eslintEngine.executeOnText(`
+const x = async () => 5;
+x();
+`);
+    expect(passReport.results[0].messages[0].ruleId).to.equal('require-await');
+    done();
+  });
+
+  it('async functions do not have "return await...."', (done) => {
+    const eslintEngine = new CLIEngine({
+      envs: ['node', 'mocha'],
+      useEslintrc: true
+    });
+    const passReport = eslintEngine.executeOnText(`
+const f1 = () => 5;
+const f2 = async () => {
+  const x = 5;
+  const y = 5;
+  return await f1(x, y);
+};
+f2();
+`);
+    expect(passReport.results[0].messages[0].ruleId).to.equal('no-return-await');
+    done();
+  });
+
+  it('loops should not contain "await" expressions"', (done) => {
+    const eslintEngine = new CLIEngine({
+      envs: ['node', 'mocha'],
+      useEslintrc: true
+    });
+    const passReport = eslintEngine.executeOnText(`
+const f1 = () => 5;
+const f2 = async () => {
+  for (let i = 0; i < 5; i++) {
+    await f1();
+  }
+};
+f2();
+`);
+    expect(passReport.results[0].messages[0].ruleId).to.equal('no-await-in-loop');
+    done();
+  });
+
 /*
 'callback-return': [2, ['callback', 'cb', 'next', 'done', 'allDone']]
 */

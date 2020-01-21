@@ -14,7 +14,7 @@ Also make sure you install an [eslint integration](http://eslint.org/docs/user-g
 
 **NOTE**: Make sure you have the correct version of `eslint` installed:
 
-  - `eslint`: ^4.0.0
+  - `eslint`: ^6.0.0
 
 ### Usage
 

@@ -6,7 +6,7 @@
   </a>
 </p>
 
-Our javascript styleguide is based off [the airbnb styleguide](https://github.com/airbnb/javascript). We support features in the latest node LTS release.
+Our JavaScript styleguide is based off [the airbnb styleguide](https://github.com/airbnb/javascript). We support features in the latest node LTS release.
 
 ## Installation
 

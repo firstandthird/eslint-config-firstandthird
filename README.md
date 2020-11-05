@@ -34,6 +34,6 @@ Create a `.eslintrc` in your project root with the following:
 
 ---
 
-<img src="https://firstandthird.com/_static/ui/images/safari-pinned-tab-62813db097.svg" height="32" width="32" align="right">
+<a href="https://firstandthird.com"><img src="https://firstandthird.com/_static/ui/images/safari-pinned-tab-62813db097.svg" height="32" width="32" align="right"></a>
 
 _[A First + Third](https://firstandthird.com) Project_

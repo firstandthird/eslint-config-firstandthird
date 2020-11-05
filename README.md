@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/firstandthird/eslint-config-firstandthird/actions">
-    <img src="https://img.shields.io/github/workflow/status/firstandthird/eslint-config-firstandthird/test/main?label=Tests&style=for-the-badge" alt="Test Status"/>
+    <img src="https://img.shields.io/github/workflow/status/firstandthird/eslint-config-firstandthird/Test/main?label=Tests&style=for-the-badge" alt="Test Status"/>
   </a>
 </p>
 

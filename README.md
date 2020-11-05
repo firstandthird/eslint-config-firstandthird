@@ -1,28 +1,39 @@
-# ESLint config
+<h1 align="center">First + Third - ESLint config</h1>
 
-![npm](https://img.shields.io/npm/v/eslint-config-firstandthird.svg) [![Build Status](https://travis-ci.org/firstandthird/eslint-config-firstandthird.svg?branch=master)](https://travis-ci.org/firstandthird/eslint-config-firstandthird)
+<p align="center">
+  <a href="https://github.com/firstandthird/eslint-config-firstandthird/actions">
+    <img src="https://img.shields.io/github/workflow/status/firstandthird/eslint-config-firstandthird/test/main?label=Tests&style=for-the-badge" alt="Test Status"/>
+  </a>
+</p>
 
-Server code should follow [this styleguide](https://github.com/airbnb/javascript) and use ES6 that's [shipping in node](http://node.green).
+Our JavaScript styleguide is based off [the airbnb styleguide](https://github.com/airbnb/javascript). We support features in the latest node LTS release.
 
-### Installation
+## Installation
 
 ```sh
-npm install
+npm install -D eslint eslint-plugin-import eslint-config-firstandthird
 ```
 
-Also make sure you install an [eslint integration](http://eslint.org/docs/user-guide/integrations) in your editor.
+_or_
 
-**NOTE**: Make sure you have the correct version of `eslint` installed:
+```sh
+yarn add -D eslint eslint-plugin-import eslint-config-firstandthird
+```
 
-  - `eslint`: ^6.0.0
+## Editor Setup
+Make sure you install an [eslint integration](http://eslint.org/docs/user-guide/integrations) in your editor.
 
-### Usage
-
+## Project Setup
 Create a `.eslintrc` in your project root with the following:
 
-**Nodejs**
 ```json
 {
   "extends": "firstandthird"
 }
 ```
+
+---
+
+<a href="https://firstandthird.com"><img src="https://firstandthird.com/_static/ui/images/safari-pinned-tab-62813db097.svg" height="32" width="32" align="right"></a>
+
+_[A First + Third](https://firstandthird.com) Project_

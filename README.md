@@ -1,6 +1,7 @@
 <h1 align="center">First + Third - ESLint config</h1>
 
 <p align="center">
+  <img src="https://img.shields.io/npm/v/eslint-config-firstandthird.svg?label=npm&style=for-the-badge" alt="NPM" />
   <a href="https://github.com/firstandthird/eslint-config-firstandthird/actions">
     <img src="https://img.shields.io/github/workflow/status/firstandthird/eslint-config-firstandthird/Test/main?label=Tests&style=for-the-badge" alt="Test Status"/>
   </a>
